@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="consistency.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+    <style>
+    #aboutme{padding-top: 400px;}
+    </style>
+
+    <header id="header"></header>
+    
+    
+    <main></main>
+       
+    <script>        
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+         document.getElementById('header').innerHTML = data;
+        }) 
+        
+        .catch(error => {
+    console.error('Fehler beim Laden des Headers:', error);
+  });</script>
+    
+
+   <!--  <div id="animation-container"></div>
+
+    <script>
+        fetch('animation.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('animation-container').innerHTML = data;
+          });
+    </script> -->
+
+
+        <p id="aboutme">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus autem natus voluptates quod soluta, vero, quisquam sed voluptas atque, perspiciatis modi debitis eos sapiente ea maxime dicta! Vero dolores ab consectetur numquam illum et pariatur fugit quaerat facilis alias. Quae, eos mollitia nobis molestias adipisci, enim cum provident doloremque iusto minima commodi modi sequi, deleniti sint. Possimus nobis assumenda sint ut at incidunt suscipit illo maxime, laudantium eaque officia minima dicta officiis neque, temporibus quia voluptates autem vero a alias quas veritatis repudiandae? Eius tempore explicabo beatae veritatis et iure, facilis vero doloribus sed dicta delectus pariatur tenetur laudantium natus!
+        </p>
+     
+<div id="footer"></div>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+         document.getElementById('footer').innerHTML = data;
+        })
+
+        .catch(error => {
+    console.error('Fehler beim Laden des footers:', error);
+  });
+
+  
+</script>
+
+</body>
+</html>
