@@ -15,6 +15,12 @@
 </head>
 
 <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: 
+    border-box;
+    }
 
     header{
     width: 100%;
@@ -22,14 +28,23 @@
     position: fixed;
     background-color: rgb(255, 255, 255);
     z-index: 5;
-    box-shadow: 10px 10px 10px rgba(19, 19, 19, 0.3);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
-
+img {
+    width: 90px;
+    height: 90px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    user-select: none;
+    
+    position: relative;
+    left: 15px;
+}
 
 h1{
-    padding-left: 9rem;
+    
     font-family: sans-serif;
     color: rgb(48, 46, 46);
      /* Manchmal ist es besser bestimmte Texte unmarkierbar zu machen. Mit user-select: none; wird ein Text,
@@ -38,6 +53,9 @@ h1{
     -webkit-user-select: none;
     -moz-user-select: none; /* Für Firefox */
     -ms-user-select: none;/* Für IE/Edge */
+    position: relative;
+    left: 100px;
+    top: -50px;
 }
 
 a {text-decoration: none; color: black;}
@@ -48,15 +66,16 @@ a:hover{
 nav ul li{
     list-style: none;
     display: inline-block;
-    padding-left: 9rem; 
+    padding-left: 155px; 
+    left: -10px;
     position: relative;
-    top: 50px;
+    top: -32px;
     font-family: sans-serif;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none; /* Für Firefox */
     -ms-user-select: none;/* Für IE/Edge */
-    
+    font-size: 1.2rem;
 }
 
 /*
@@ -83,7 +102,7 @@ input[type="checkbox"]:checked ~ ul {
 <body>
 
     <header>
-     <br><h1 class="index"><a href="index.html">Mehmet Volkan Imran</a></h1>
+<a href="index.html"><img src="logo.jpg" alt="logo"></a><h1 class="index">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">Mehmet V Imran</a></h1>
         
         <nav>
         
@@ -95,8 +114,8 @@ input[type="checkbox"]:checked ~ ul {
             
         <ul>
             <li><a href="aboutme.html">Über mich</a></li>
-                <li><a href="#">Projekte</a></li>
-                    <li><a href="#">Tools</a></li>
+                <li><a href="project.html">Projekte</a></li>
+                    <li><a href="tools.html">Tools</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
         </ul>
 

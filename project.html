@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Document</title>
+   <!-- <script src="shop.js"></script> -->
     <link rel="stylesheet" href="consistency.css">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
 
-    <style></style>
+    <style>
+    #text{padding-top: 400px; 
+      text-align: justify; 
+       hyphens: auto;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+      -webkit-hyphens: auto;}
+      
+    </style>
 
     <header id="header"></header>
     
@@ -21,7 +28,7 @@
         fetch('header.html')
         .then(response => response.text())
         .then(data => {
-         document.getElementById('header').innerHTML = data;
+         document.getElementById('header').innerHTML = data;s
         }) 
         
         .catch(error => {
@@ -29,24 +36,34 @@
   });</script>
     
 
-    <div id="animation-container"></div>
-
-    <script>
-        fetch('animation.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('animation-container').innerHTML = data;
-          });
-    </script>
 
 
-        <p>
-          Willkommen auf meiner Website. Diese Website wurde von mir erstellt und entwickelt und es wird zwischen durch neues eingefügt oder gegebebfalls optisch verbessert. Bitte haben Sie verständnis wenn etwas nicht richtig funktioniert :).
-          
-         
-          <br><br>
-          Ich nehme gerne Verbesserungsvorschläge an. 
-        </p>
+<p id="text"> Projektseite.</p><br><br>
+
+<!-- <script>
+  let wasmExports = null;
+
+  let wasmMemory = new WebAssembly.Memory({initial: 256, maximum: 256});
+
+  var info = {
+    'env': asmLibraryArg,
+    'wasi_snapshot_preview1': asmLibraryArg};
+
+  async function loadWasm(){
+
+    let response = await fetch('shop.wasm');
+    let bytes = await response.arrayBuffer();
+    let wasmObj = await WebAssembly.instantiate(bytes, info);
+    wasmExports = wasmObj.instance.exports;
+
+    
+  }
+</script> -->
+
+
+
+
+
      
 <div id="footer"></div>
 <script>
@@ -59,6 +76,8 @@
         .catch(error => {
     console.error('Fehler beim Laden des footers:', error);
   });
+
+  
 </script>
 
 </body>
