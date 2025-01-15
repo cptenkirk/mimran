@@ -21,3 +21,25 @@
            
             
             }
+
+            /* Snake Spiel Einstellungen */
+
+            #snake{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 0px solid #fff;
+                padding: 10px;
+                
+            }
+            
+            canvas {
+                border: 1px solid #fff;
+                background-color: #797171;
+            }
+
+            #restart {
+                height: 32px;
+                width: 60px;
+                
+            }

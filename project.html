@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <!-- <script src="shop.js"></script> -->
+   
     <link rel="stylesheet" href="consistency.css">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
@@ -15,8 +15,15 @@
       text-align: justify; 
        hyphens: auto;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-      -webkit-hyphens: auto;}
+      -webkit-hyphens: auto;
+      font-size: xx-large;
       
+    }
+      
+
+    
+     
+
     </style>
 
     <header id="header"></header>
@@ -28,7 +35,7 @@
         fetch('header.html')
         .then(response => response.text())
         .then(data => {
-         document.getElementById('header').innerHTML = data;s
+         document.getElementById('header').innerHTML = data;
         }) 
         
         .catch(error => {
@@ -38,27 +45,22 @@
 
 
 
-<p id="text"> Projektseite.</p><br><br>
+<p id="text">Auf dieser Projektseite bette ich nach und nach neue Projekte ein.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<!-- <script>
-  let wasmExports = null;
 
-  let wasmMemory = new WebAssembly.Memory({initial: 256, maximum: 256});
+<div id="snake"><h1>Snake</h1>
 
-  var info = {
-    'env': asmLibraryArg,
-    'wasi_snapshot_preview1': asmLibraryArg};
+  
 
-  async function loadWasm(){
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+   <div id=""><button id="restart" style="display:none;">Neustart</button></div>
+  <script src="snake.js"></script>
+</div>
 
-    let response = await fetch('shop.wasm');
-    let bytes = await response.arrayBuffer();
-    let wasmObj = await WebAssembly.instantiate(bytes, info);
-    wasmExports = wasmObj.instance.exports;
+ 
 
-    
-  }
-</script> -->
+
+
 
 
 
