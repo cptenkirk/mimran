@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>low animation</title>
+    
+    <link rel="stylesheet" href="consistency.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    
+    .überschrift {
+    
+    font-family: sans-serif;
+    
+    
+    text-shadow: 7px 7px 7px #030303; 
+    top: 4%;
+    left: -65%;
+    
+   /*  justify-content: center;
+    align-items: center; */
+    z-index: 1;
+    
+    font-size: 3rem;
+    color: aliceblue;
+    
+    text-decoration: none;
+   
+    user-select: none;
+    -webkit-user-select: none; /* Für Safari */
+    -moz-user-select: none; /* Für Firefox */
+    -ms-user-select: none; /* Für IE/Edge */
+    
+    
+}
+
+#foto {
+    
+    height: 650px;
+    width: 1300px;
+    display: flex;
+    opacity: 1;
+    margin-top: 7%;
+    left: -5%;
+    box-shadow: 20px 20px 20px rgba(0.5, 0.3, 0.3, 0.3);
+    filter: brightness(90%);
+    filter: saturate(105%);
+    filter: contrast(110%);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+    z-index: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+/* #curtain {
+    
+    height: 820px;
+    width: 390px;
+    
+    opacity: 0.7;
+    position: absolute;
+   
+    box-shadow: #030303;
+    z-index: 1;
+    display: flex;
+    float: right;
+}
+ */
+
+
+span
+{
+    animation: 2s infinite forwards;
+    
+}
+
+
+
+
+.container
+{
+    position: flex;
+    width: 100%;
+    height: 75vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /*  overflow bedeutet!
+
+Kontrolle über das Layout: Mit Overflow kannst du steuern, wie dein Layout aussieht, wenn Inhalte über die Grenzen eines Elements hinausragen.
+
+Verhindern von unerwünschten Effekten: Overflow hilft, zu vermeiden, dass Inhalte über andere Elemente hinweg fließen und das Layout durcheinanderbringen.
+
+Erstellen von Scrollbars: Du kannst Scrollbars hinzufügen, um Benutzern zu ermöglichen, den überlaufenden Inhalt zu sehen.
+
+Die verschiedenen Overflow-Werte
+visible: Der überfließende Inhalt wird außerhalb des Containers angezeigt.
+hidden: Der überfließende Inhalt wird abgeschnitten und ist nicht sichtbar.
+scroll: Es wird eine Scrollbar angezeigt, um den überfließenden Inhalt anzuzeigen.
+auto: Der Browser entscheidet, ob eine Scrollbar angezeigt wird, basierend auf dem Inhalt.
+
+*/
+}
+
+
+.container .überschrift{
+    animation: none; /* Deaktiviert die Animation für diese Überschrift */
+}
+
+
+.bubbles  /* Beschreibeung eines Elemnenst, z.B. Luftblasen für die gestaltung von Website*/
+{
+    position: absolute;
+    
+    /* position: relative; ist eine CSS-Eigenschaft, die die Positionierung eines Elements innerhalb seines normalen Dokumentablaufs beeinflusst. 
+
+    Ausgangspunkt: Das Element behält seinen ursprünglichen Platz im Dokument bei, als wäre es nicht positioniert.
+
+    Verschiebung: Durch die Werte top, right, bottom und left kannst du das Element relativ zu seiner ursprünglichen Position verschieben. 
+    
+    Warum wird position: relative; verwendet?
+    
+    Feine Anpassungen: Es ermöglicht, Elemente präzise innerhalb ihres Containers zu positionieren.
+
+    Als Bezugspunkt für absolut positionierte Elemente: Ein relativ positioniertes Element kann als Bezugspunkt für absolut positionierte Elemente dienen.
+
+    Für Effekte: Es wird häufig für Effekte wie Tooltips, Dropdown-Menüs oder Overlay-Elemente verwendet.*/
+
+    display: flex;
+
+    /* Anwendungsbeispiele von display: flex;
+
+    1. Zentrieren von Elementen: Mit justify-content und align-items können Elemente sowohl horizontal als auch vertikal zentriert werden.
+      
+    2.Erstellen von Grid-Layouts: Flexbox kann verwendet werden, um einfache Grid-Layouts zu erstellen, ohne auf CSS Grid zurückgreifen zu müssen.
+    
+    3.Responsive Design: Flexbox ist ideal für responsive Designs, da es ermöglicht, Layouts dynamisch an verschiedene Bildschirmgrößen anzupassen.
+    
+    4.Erstellen von Navigationsleisten: Flexbox eignet sich hervorragend für die Erstellung von horizontalen oder vertikalen Navigationsleisten. */
+    top: 0;
+    left: 0;
+            pointer-events: none;
+}
+
+
+
+.bubbles span /* Hier selektiere ich alle span Element mit der Klasse "bubbles" */
+{
+    position: relative; /* Damit positioniere ich mein Element, um die Animationen richtig darstellen zu können. */
+    width: 30px;  /* Die Breite der animation */
+    height: 30px; /* Die höhe der Animation */
+    background: #056add; /* Hintergrundfarbe des Elements */
+    margin: 0 4px; /* Randsetzung in Pixel von rechts und links */
+    border-radius: 0%; /* Das Element kreisförmig darstellen */
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #19191a, 0 0 100px #000000; /* Schlagschatten um das Element hinzufügen um einen 3D-Effekt darzustelen */
+    animation: animate 15s  infinite; /* Startet die Animation der 15 Sekunden dauert und Endlos sich wiederholt */
+    animation-duration: calc(160s / var(--i)); /* Dynamische Berechnung der Animation in Zeit, dies basiert auf den Wert der CSS Variable --i, jehöher der Wert desto kürzer die Animationsdauer */
+    animation-delay: 0s;
+    z-index: 0;
+    
+}
+
+.bubbles span:nth-child(0) /* Selektierung aller Elemnte mit der Klasse bubbles und :nth-child(0) selektiert das erste Kind eines Elements */
+{
+    background: #dc4f5b; /* Hintergrundfarbe des ausgewählten span Elements */
+
+    box-shadow: 0 0 0 10px #3454be44 /* innerer Schatten */, 0 0 50px #dc4f5b /*mittlerer Schatten*/, 0 0 100px #dc4f5b /*äußerer Schatten*/;
+
+    /* Schlagschatten um das Element hinzufügen, um einen 3D-Effekt zu erzeugen. Der Schatten besteht aus 3 Teilen.*/
+    
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation: bubbles 3s infinite;
+   
+}
+
+
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+@media (max-width: 2160px) {
+    /* Styles für Bildschirme bis 768px Breite */
+  }
+</style>
+<body>
+
+    
+
+
+    <div class="container"> 
+        
+        
+
+        
+
+        <!-- Das </div> Element ist ein Container um die Bereiche einer Website zu strukturieren und zu gruppurieren. Wenn man diesen Container einen "class" zuweist, dann kann man
+        diesen Bereich mit CSS gestalten -->
+<img src="CSSandAnimation/foto.jpg" alt="foto" id="foto"><h1 class="überschrift">Hi, &nbsp;mein &nbsp;Name &nbsp;ist &nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mehmet</h1><h1></h1>
+
+        <div class="bubbles">
+           
+             
+            <!-- Das <div class="bubbles"></div> Element im HTML-Code definierten den Bereich auf meiner Website mit dem Animationsnamen bubbles.  -->
+
+
+            
+            <span style="--i:30;"></span> 
+
+
+
+            <span style="--i:5;"></span>
+
+
+            <span style="--i:2;"></span>
+
+            <span style="--i:25;"></span>
+
+            <span style="--i:18;"></span>
+            <span style="--i:10;"></span>
+ <span style="--i:5;"></span>
+            <span style="--i:22;"></span>
+
+            <span style="--i:5;"></span>
+
+           
+            <span style="--i:24;"></span>
+            <span style="--i:13;"></span>
+         
+
+
+           
+          
+
+            <!-- Wofür wird das <span>-Element verwendet?
+
+                1. Styling: Du kannst das <span>-Element verwenden, um bestimmten Wörtern oder Phrasen innerhalb eines Textes einen anderen Stil zu geben. Zum Beispiel kannst du einen    bestimmten Begriff fett, kursiv oder in einer anderen Farbe darstellen.
+
+                    2. JavaScript: Mit JavaScript kannst du Events auf <span>-Elemente anwenden. So kannst du beispielsweise ein <span>-Element beim Überfahren mit der Maus hervorheben oder einen Link erstellen, der nur auf einen Teil eines Wortes zeigt.
+
+                        3. Zugänglichkeit: In Kombination mit ARIA-Attributen kannst du <span>-Elemente verwenden, um Screenreadern zusätzliche Informationen über den Inhalt bereitzustellen und so die Barrierefreiheit deiner Webseite zu verbessern.
+
+                            Beispiel: <p>Dies ist ein normaler Satz. <span style="color: blue;">Dieses Wort ist blau.</span></p>
+
+                            -In diesem Beispiel wird das Wort "blau" innerhalb des Absatzes blau gefärbt, indem es in ein <span>-Element eingeschlossen wird und diesem Element ein CSS-Style zugewiesen wird. -->
+        </div>
+        
+        
+    </div>
+
+    
+</body>
+</html>
