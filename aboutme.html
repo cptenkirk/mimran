@@ -6,7 +6,7 @@
     
     <title>Document</title>
     <link rel="stylesheet" href="CSSandAnimation/consistency.css">
-    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
 
@@ -15,21 +15,77 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;}
+
+    #überschrift {
     
+    font-family: sans-serif;
+    
+    position: absolute;
+    text-shadow: 7px 7px 7px #030303;
+    top: 30%;
+    left: 20%;
+    
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+    font-size: 3rem;
+    color: aliceblue;
+    
+    text-decoration: none;
+   
+    user-select: none;
+    -webkit-user-select: none; /* Für Safari */
+    -moz-user-select: none; /* Für Firefox */
+    -ms-user-select: none; /* Für IE/Edge */
+    }
+    
+      
+    
+    #animation-container{
+      z-index: 3;
+    }
+
+    #foto {
+    
+    height: 90%;
+    width: 100%;
+    display: flex;
+    opacity: 1;
+    top: 2.2rem;
+    left: 0;
+    position: absolute;
+    box-shadow: 20px 20px 20px rgba(0.5, 0.3, 0.3, 0.3);
+    filter: brightness(90%);
+    filter: saturate(105%);
+    filter: contrast(110%);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+    z-index: 0;
+    
+    object-fit: cover;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    
+}
+
+
+    #footer{
+      bottom: -280%; position: relative;
     }
 
     #aboutme{  hyphens: auto; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 0;
-      background-color: white; color: black; text-align: justify;}
+      background-color: white; color: black; text-align: justify; top: 87%; position: absolute;}
 
-     #Lebenslauf { text-align: justify; hyphens: auto; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 5;
-     margin-top: 0px; /* background-color: white; */ color: rgb(255, 255, 255); top: 15%;}
+     #Lebenslauf { text-align: justify; hyphens: auto; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 0;
+      /* background-color: white; */ color: rgb(255, 255, 255); top: 15%; position: absolute; top: 186%;}
     </style>
 
     <header id="header"></header>
     
     
-    <main></main>
+    <main display: none;></main>
        
     <script>        
         fetch('header.html')
@@ -43,7 +99,7 @@
   });</script>
     
 
-   <div id="animation-container"></div>
+  <div id="animation-container"></div>
 
     <script>
         fetch('CSSandAnimation/low-animation.html')
@@ -54,72 +110,105 @@
     </script>
 
     
-        <p id="aboutme"><br><br><br><br><br><br>
-
-          Ich bin gelernter Fachlagerist und lebe schon seit 20 Jahren im Bremer Umkreis. Durch meine Tätigkeit in der Automobilindustrie habe ich umfassende Kenntnisse wie Lagerverwaltung, Transportplanung, Sicherheit und Just-in-time-Produktion erworben. Heute mache ich eine Umschulung als Anwendungsentwickler. 
+    
+        
+        
+    <div><h1 id="überschrift">Hi, &nbsp;mein&nbsp; <br>&nbsp;&nbsp;Name&nbsp; ist&nbsp; <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mehmet</h1><h1></h1></div>
+        
+<div> 
+      <!-- Das </div> Element ist ein Container um die Bereiche einer Website zu strukturieren und zu gruppurieren. Wenn man diesen Container einen "class" zuweist, dann kann man
+      diesen Bereich mit CSS gestalten -->
+<img src="/CSSandAnimation/3.png" alt="foto" id="foto">
+  </div>
+<div><p id="aboutme"><br><br><br><br>
+          Ich bin gelernter Fachlagerist und lebe schon seit 20 Jahren im Bremer Umkreis. 
+          Durch meine Tätigkeit in der Automobilindustrie habe ich umfassende Kenntnisse wie Lagerverwaltung, Transportplanung, 
+          Sicherheit und Just-in-time-Produktion erworben. Heute mache ich eine Umschulung als Anwendungsentwickler. 
           <br><br>
           
-          Aber warum habe ich meinen Beruf in die IT-Branche umgestellt? Schon als Jugendlicher habe ich gerne mit Computern gearbeitet und Hardware zusammengebaut und Anfang 2024 kam ich zum ersten Mal mit Programmiersprachen in Berührung, was mich total begeistert. Diese Leidenschaften haben mich dazu motiviert, eine Umschulung zum Anwendungsentwickler zu machen.
+          Aber warum habe ich meinen Beruf in die IT-Branche umgestellt? Schon als Jugendlicher habe ich gerne mit Computern gearbeitet und 
+          Hardware zusammengebaut und Anfang 2024 kam ich zum ersten Mal mit Programmiersprachen in Berührung, was mich total begeistert. 
+          Diese Leidenschaften haben mich dazu motiviert, eine Umschulung zum Anwendungsentwickler zu machen.
           <br><br>
 
-          Aber ich hatte schon vor der eigentlichen Umschulung  meinen Beruf komplett in die IT-Branche umgestellt, denn ich finanzierte anfangs meine Weiterbildung zum IT-Supporter selbst. In meinem ersten IT-Job als Techniker im Außendienst, fühlte ich mich schon fast wie Zuhause. Ich übte meine Arbeiten so aus, als ob ich schon seit mehreren Jahren als Fachinformatiker tätig wäre. 
+          Aber ich hatte schon vor der eigentlichen Umschulung  meinen Beruf komplett in die IT-Branche umgestellt, denn ich finanzierte anfangs meine 
+          Weiterbildung zum IT-Supporter selbst. In meinem ersten IT-Job als Techniker im Außendienst, fühlte ich mich schon fast wie Zuhause. 
+          Ich übte meine Arbeiten so aus, als ob ich schon seit mehreren Jahren als Fachinformatiker tätig wäre. 
 
    
           <br><br>
-          Doch mein Erfolg hing nicht allein vom IT-Knowledge ab. Meine Erfahrung in der Logistik hat mich gelehrt, flexibel auf Veränderungen zu reagieren und schnell Lösungen zu finden. Diese Fähigkeit ist auch in der IT unerlässlich, um auf neue Anforderungen der Kunden einzugehen. 
+          Doch mein Erfolg hing nicht allein vom IT-Knowledge ab. Meine Erfahrung in der Logistik hat mich gelehrt, 
+          flexibel auf Veränderungen zu reagieren und schnell Lösungen zu finden. Diese Fähigkeit ist auch in der IT unerlässlich, 
+          um auf neue Anforderungen der Kunden einzugehen. 
 
 
 
           <br><br>
           Gerne kannst du auch meinen Lebenslauf unten weiterlesen, wenn du natürlich die Zeit dazu hast :) <br><br> <br><br> <br><br></p>
 
+        </div>  
+
           
 
-          <br><br><br><br><br>
-
-<p id="Lebenslauf"><br>
+<div><p id="Lebenslauf">
           Lebenslauf
           <br><br><br><br>
           08/2007 - 12/2009 bei Schmalriede-Zink GmbH in Ganderkesee<br><br>
          
-          Chaotischer Lagerist, mein erster Schritt in die richtige Arbeitswelt in der Logistik. Doch Chaos in der Lagerhaltung hat nichts mit dem alltäglichen Chaos zu tun, das wir vielleicht jeden Tag erleben. Wichtig ist zu verstehen, dass es in der chaotischen Lagerhaltung darum geht, flexibel den Lagerraum auszunutzen und täglich mit neuen Herausforderungen umzugehen. Durch diese Flexibilität habe ich gelernt, schnell zu reagieren und effiziente Lösungen zu finden. Ohne digitale Lösungen muss man sich das Lager als seinen eigenen Schreibtisch vorstellen. Durch diese Tätigkeit durfte ich mir gute analytische Fähigkeiten und selbstständiges arbeiten aneignen.<br><br>
+          Chaotischer Lagerist, mein erster Schritt in die richtige Arbeitswelt in der Logistik. Doch Chaos in der Lagerhaltung hat nichts mit dem alltäglichen Chaos zu tun, 
+          das wir vielleicht jeden Tag erleben. Wichtig ist zu verstehen, dass es in der chaotischen Lagerhaltung darum geht, 
+          flexibel den Lagerraum auszunutzen und täglich mit neuen Herausforderungen umzugehen. Durch diese Flexibilität habe ich gelernt, 
+          schnell zu reagieren und effiziente Lösungen zu finden. Ohne digitale Lösungen muss man sich das Lager als seinen eigenen Schreibtisch vorstellen. 
+          Durch diese Tätigkeit durfte ich mir gute analytische Fähigkeiten und selbstständiges arbeiten aneignen.<br><br>
 
 
           12/2009 - 03/2011 Topran Germany in Ganderkesee<br><br>
 
 
-          Und wieder im Lager, aber diesmal im Regallager mit digitalen Lösungen. Topran Germany ist ein umsatzsicheres Unternehmen, das KFZ-Teile verkauft. Hier war wirklich Zeitmanagement gefragt. <br><br>
+          Und wieder im Lager, aber diesmal im Regallager mit digitalen Lösungen. Topran Germany ist ein umsatzsicheres Unternehmen, 
+          das KFZ-Teile verkauft. Hier war wirklich Zeitmanagement gefragt. <br><br>
 
 
           10/2011 - 07/2014 Ausbildung bei Schmalriede-Zink GmbH in Ganderkesee<br><br>
 
 
-          Endlich begann ich meine erste Ausbildung und überraschenderweise als Fachkraft für Lager und Logistik. Durch die Ausbildung habe ich mehr über die wirtschaftlichen Zusammenhänge gelernt und Fachbereiche wie Tourenplanung, Transport, Lagerverwaltung, Inventur und Sicherheit verinnerlicht.<br><br>
+          Endlich begann ich meine erste Ausbildung und überraschenderweise als Fachkraft für Lager und Logistik. Durch die Ausbildung habe 
+          ich mehr über die wirtschaftlichen Zusammenhänge gelernt und Fachbereiche wie Tourenplanung, Transport, Lagerverwaltung, Inventur und Sicherheit verinnerlicht.<br><br>
 
 
           08/2014 - 05/2015 Handelsvertreter und Medienberater bei Kabel Deutschland<br><br>
 
-          Als Handelsvertreter bei Kabel Deutschland habe ich gelernt, selbstständig zu arbeiten und meine Ziele eigenverantwortlich zu verfolgen. Ich habe dabei festgestellt, dass eine offene und transparente Kommunikation der Schlüssel zum Erfolg ist. Vorausschauendes Denken und eine Dokumentation der Verkaufsorte waren ein wichtiger Bestandteil für diese Tätigkeit.<br><br>
+          Als Handelsvertreter bei Kabel Deutschland habe ich gelernt, selbstständig zu arbeiten und meine Ziele eigenverantwortlich zu verfolgen. 
+          Ich habe dabei festgestellt, dass eine offene und transparente Kommunikation der Schlüssel zum Erfolg ist. 
+          Vorausschauendes Denken und eine Dokumentation der Verkaufsorte waren ein wichtiger Bestandteil für diese Tätigkeit.<br><br>
 
 
           06/2015 - 05/2016 BLG Logistic in Bremen<br><br>
 
 
-          Ich suchte mir wieder Aufstiegschancen im Logistikbereich. So nahm ich die Arbeit bei BLG Logistics in Bremen auf. Ein sehr dynamisches Logistikunternehmen. Hier werden verschiedene KFZ-Teile von Daimler AG verpackt und International verschifft. Ich genoss hier die Räumlichkeit und die Planung. Ich erfuhr hier endlich mehr über die logischen Prozesse der Automobilindustrie.<br><br>
+          Ich suchte mir wieder Aufstiegschancen im Logistikbereich. So nahm ich die Arbeit bei BLG Logistics in Bremen auf. 
+          Ein sehr dynamisches Logistikunternehmen. Hier werden verschiedene KFZ-Teile von Daimler AG verpackt und International verschifft. 
+          Ich genoss hier die Räumlichkeit und die Planung. Ich erfuhr hier endlich mehr über die logischen Prozesse der Automobilindustrie.<br><br>
 
 
           06/2016 - 08/2023 Lear Corporation in Bremen<br><br>
 
 
-          Just-in-Sequence-Versand bei Lear Corporation in Bremen, ein dynamischer Job, sowohl in der Logistik als auch in der Produktion. Hier  war vorausschauendes verwalten der Güter mit Timing entscheidend, denn hier herrschte zeitkritischer Logistik, was bedeutete das die Produktion Synchron mit der Kundenproduktion lief. Das Fertiggut ging gleich in den Transport zum Daimler-Werk und musste rechtzeitig in die Autoproduktion.<br><br>
+          Just-in-Sequence-Versand bei Lear Corporation in Bremen, ein dynamischer Job, sowohl in der Logistik als auch in der Produktion. 
+          Hier  war vorausschauendes verwalten der Güter mit Timing entscheidend, denn hier herrschte zeitkritischer Logistik, was bedeutete das die Produktion 
+          Synchron mit der Kundenproduktion lief. Das Fertiggut ging gleich in den Transport zum Daimler-Werk und musste rechtzeitig in die Autoproduktion.<br><br>
 
 
           08/2023 - 01/2024 Bechtle AG Hamburg<br><br>
 
 
-          Mein wichtigster Schritt, um in die Fachinformatiker-Welt einzutauchen. Bei Bechtle AG zu arbeiten, würde ich jedem empfehlen. Als IT-Techniker im Außendienst habe ich die Arbeiten sehr erfolgreich ausgeübt. Doch einfach war es nicht, da steckte viel Planung und Disziplin, denn als Techniker ist man oft alleine unterwegs. Die Touren, die Tickets und die Rollouts nach Plan durchzuführen erforderte gutes Zeitmanagement, Teamarbeit, Koordination und eine saubere Dokumentation. Durch meine vorherige Erfahrung aus der Logistik, konnte ich effiziente Arbeitsabläufe etablieren und so zur termingerechten Umsetzung der Projekte beitragen.</p> <br><br><br><br><br><br>
+          Mein wichtigster Schritt, um in die Fachinformatiker-Welt einzutauchen. Bei Bechtle AG zu arbeiten, würde ich jedem empfehlen. 
+          Als IT-Techniker im Außendienst habe ich die Arbeiten sehr erfolgreich ausgeübt. Doch einfach war es nicht, da steckte viel Planung und Disziplin, 
+          denn als Techniker ist man oft alleine unterwegs. Die Touren, die Tickets und die Rollouts nach Plan durchzuführen erforderte gutes Zeitmanagement, 
+          Teamarbeit, Koordination und eine saubere Dokumentation. Durch meine vorherige Erfahrung aus der Logistik, konnte ich effiziente 
+          Arbeitsabläufe etablieren und so zur termingerechten Umsetzung der Projekte beitragen.</p> <br><br><br><br><br><br>
 
-        </p>
+        </div>
      
 <div id="footer"></div>
 <script>
