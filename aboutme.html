@@ -72,14 +72,23 @@
 
 
     #footer{
-      bottom: -280%; position: relative;
+      bottom: -100%; position: relative;
     }
 
     #aboutme{  hyphens: auto; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 0;
-      background-color: white; color: black; text-align: justify; top: 87%; position: absolute;}
+      background-color: white; color: black; text-align: justify; top: 112%; position: relative;}
 
      #Lebenslauf { text-align: justify; hyphens: auto; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 0;
-      /* background-color: white; */ color: rgb(255, 255, 255); top: 15%; position: absolute; top: 186%;}
+      /* background-color: white; */ color: rgb(255, 255, 255); top: 15%; position: relative; top: 62%;}
+
+    @media (max-width: 600px) {
+  #aboutme, #Lebenslauf {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative; /* Stelle sicher, dass keine absolute Positionierung verwendet wird */
+  }
+}
     </style>
 
     <header id="header"></header>
