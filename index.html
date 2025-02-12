@@ -11,7 +11,18 @@
 <body>
 
     <style>
-      
+      #headbackground
+
+      {
+        width: 1960px;
+        height: 1980px;
+        z-index: 0;
+        top: 0%;
+        left: -3%;
+        position: absolute;
+      }
+
+      #indexp{z-index: 2;}
     </style>
 
     <header id="header"></header>
@@ -30,9 +41,9 @@
     console.error('Fehler beim Laden des Headers:', error);
   });</script>
     
-
+    
     <div id="animation-container"></div>
-
+<div><img src="CSSandAnimation/b2.jpg" alt="" id="headbackground"></div>
     <script>
         fetch('CSSandAnimation/animation.html')
           .then(response => response.text())
@@ -42,7 +53,7 @@
     </script>
 
 
-        <p>
+        <p id="indexp">
           Willkommen auf meiner Website. Diese Website wurde von mir erstellt und entwickelt und es wird zwischendurch neues eingefügt oder gegebenenfalls optisch verbessert. Bitte habt Verständnis, wenn etwas nicht richtig funktioniert :) ich bin mit der Web-Entwicklung noch am Anfang.
           
          
