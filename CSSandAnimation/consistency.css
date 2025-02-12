@@ -8,10 +8,14 @@
     
     body{
 
-        background-color: rgb(0, 87, 137);
+        background-color: rgb(107, 107, 107);
         min-height: 100vh;
         flex-direction: column;
-        z-index: 0;}
+        z-index: 0;
+        
+    
+    }
+
 
         p{
             color: rgb(255, 255, 255);
