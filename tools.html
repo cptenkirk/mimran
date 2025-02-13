@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSSandAnimation/consistency.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSSandAnimation/rechner.css">
 </head>
 <body>
 
@@ -21,6 +22,20 @@
     -webkit-user-select: none;
     -moz-user-select: none; /* Für Firefox */
     -ms-user-select: none;/* Für IE/Edge */}
+
+    #rechner {
+
+      z-index: 0;
+    position: absolute;
+    left: 40%;
+    width: 65%;
+  
+      
+    }
+
+  
+
+
     </style>
 
     <header id="header"></header>
@@ -40,21 +55,29 @@
   });</script>
     
 
-   <!--  <div id="animation-container"></div>
+<div id="rechner">
+  <div id="resultArea"></div>  
 
-    <script>
-        fetch('animation.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('animation-container').innerHTML = data;
-          });
-    </script> -->
+  
 
+   
 
-        <p id="aboutme">
-            Coming Soon!
-            <br><br><br><br>
-        </p>
+  <table>
+
+          <tr><td></td><td></td><td class="highlight" onclick="erase()">CLEAR</td><td class="highlight" onclick="Del()">Del</td></tr> 
+
+         <tr> <td onclick="appendOperation(7)">7</td><td onclick="appendOperation(8)">8</td><td onclick="appendOperation(9)">9</td><td class="highlight" onclick="appendOperation('-')">-</td></tr>
+
+         <tr> <td onclick="appendOperation(4)">4</td><td onclick="appendOperation(5)">5</td><td onclick="appendOperation(6)">6</td><td class="highlight" onclick="appendOperation(' / ')">/</td> </tr>
+      
+         <tr> <td onclick="appendOperation(1)">1</td><td onclick="appendOperation(2)">2</td><td onclick="appendOperation(3)">3</td><td class="highlight" onclick="appendOperation(' * ')">X</td> </tr>
+          
+         <tr><td onclick="appendOperation(' , ')">,</td><td onclick="appendOperation(0)">0</td><td id="result" onclick="ergebnis(' = ')">=</td><td class="highlight" onclick="appendOperation(' + ')">+</td> </tr>
+
+  </table>  
+
+  
+</div>
      
 <div id="footer"></div>
 <script>
@@ -70,6 +93,6 @@
 
   
 </script>
-
+<script src="tools/calculator.js" defer></script>
 </body>
 </html>

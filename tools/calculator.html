@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {margin: 0; overflow: hidden;}
+
+        table { width: 35%; height: 65vh; background-color: rgb(39, 32, 32); color: aliceblue;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;font-size: 22px;user-select: none;box-sizing: border-box; }
+        
+            td { width: 25%; text-align: center; background-color: rgb(20, 20, 20);}
+           
+                td:hover {background-color: rgb(80, 79, 82); cursor: pointer; user-select: none;}
+
+                    #resultArea { height: 35vh;  background-color: black; width: 35%; font-size: 64px; text-align: center; color: aliceblue; justify-content: flex-end; box-sizing: border-box; display: flex; align-items: flex-end; padding: 20px;}
+      
+                         #result { background-color: rgb(97, 2, 250);} #result:hover{ background-color: rgb(255, 0, 0);}
+
+                            .highlight { background-color:  rgba(25, 25, 25);}
+        </style>
+
+
+              <script> 
+
+              /* Hier wird die JavaScript Funktion eingegeben*/
+                function appendOperation(operation /*hier wird eine Variable definiert, z.B. 1,2,3*/){ // hier wird mit dem JS auf das Element resultArea zugegriffen. 
+                document/*dieses Dokument*/.getElementById/*Zugriff auf das Element resultArea*/('resultArea').innerHTML /* innerer HTML-Teil mit += anhängen*/ += operation /*von der Variable operation anhängen*/; 
+              }
+
+                function ergebnis() {
+                    let container = document.getElementById('resultArea');
+                    let ergebnis = eval(container.innerHTML);
+                    container.innerHTML = ergebnis;
+                }
+
+                    function Del() {
+                        let container = document.getElementById('resultArea');
+                        if (container.innerHTML.endsWith(' ')) { container.innerHTML = container.innerHTML.slice(0,-3); /* durch slice 0,-3 werden 3 Zeichen gelöscht */} else {
+                        container.innerHTML = container.innerHTML.slice(0,-1);  /* durch slice 0,-1 wird die letzte Zahl gelöscht */}
+                    }
+
+                        function erase() { //Funktion um den gesamten Inhalt zu löschen
+                            document.getElementById('resultArea').innerHTML = '';
+                        }
+
+
+                        </script>                         
+
+
+
+
+</head>
+<body>
+   
+    <div id="resultArea"></div>  
+
+  
+
+   
+
+    <table>
+
+            <tr><td></td><td></td><td class="highlight" onclick="erase()">CLEAR</td><td class="highlight" onclick="Del()">Del</td></tr> 
+
+           <tr> <td onclick="appendOperation(7)">7</td><td onclick="appendOperation(8)">8</td><td onclick="appendOperation(9)">9</td><td class="highlight" onclick="appendOperation('-')">-</td></tr>
+
+           <tr> <td onclick="appendOperation(4)">4</td><td onclick="appendOperation(5)">5</td><td onclick="appendOperation(6)">6</td><td class="highlight" onclick="appendOperation(' / ')">/</td> </tr>
+        
+           <tr> <td onclick="appendOperation(1)">1</td><td onclick="appendOperation(2)">2</td><td onclick="appendOperation(3)">3</td><td class="highlight" onclick="appendOperation(' * ')">X</td> </tr>
+            
+           <tr><td onclick="appendOperation(' , ')">,</td><td onclick="appendOperation(0)">0</td><td id="result" onclick="ergebnis(' = ')">=</td><td class="highlight" onclick="appendOperation(' + ')">+</td> </tr>
+
+    </table>  
+      
+
+        
+   
+
+    
+</body>
+</html>
