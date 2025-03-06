@@ -3,10 +3,12 @@ function appendOperation(operation /*hier wird eine Variable definiert, z.B. 1,2
     document/*dieses Dokument*/.getElementById/*Zugriff auf das Element resultArea*/('resultArea').innerHTML /* innerer HTML-Teil mit += anhängen*/ += operation /*von der Variable operation anhängen*/; 
   }
 
-    function ergebnis() {
+  /* Deklaration ergebnis-Funktion */
+
+    function ergebnis() /* Durch den Button"="  */{
         let container = document.getElementById('resultArea');
         let ergebnis = eval(container.innerHTML);
-        container.innerHTML = ergebnis;
+        container.innerHTML = ergebnis.toFixed(8);
     }
 
         function Del() {
