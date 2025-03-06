@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Document</title>
-    <link rel="stylesheet" href="CSSandAnimation/consistency.css">
+   <link rel="stylesheet" href="CSSandAnimation/consistency.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="CSSandAnimation/flashcard.css">
 </head>
@@ -29,7 +29,7 @@
   });</script>
     
 
-<h1 style="left: 0; text-align: center; top: -3%; color: black;" >Fachinformatiker Lernkarten, (noch Baustelle)</h1>
+<h1 style="justify-content: center; text-align: center; top: 20%; color: black; position: absolute;" >Fachinformatiker Lernkarten, (noch Baustelle)</h1>
 <p style="text-align: center;">Planen, Vorbereiten und Durchführen</p><br><br>
 <section id="kopf" style="text-align: center; top: -8%; position: relative;">
   <button id="add"></button>
@@ -57,7 +57,20 @@
 
 
      
+<div id="footer"></div>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+         document.getElementById('footer').innerHTML = data;
+        })
 
+        .catch(error => {
+    console.error('Fehler beim Laden des footers:', error);
+  });
+ 
+  
+</script>
 <script src="lernkarten/daten.js"></script>
 <script src="lernkarten/index.js"></script>
 </body>
