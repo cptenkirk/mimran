@@ -57,20 +57,7 @@
 
 
      
-<div id="footer"></div>
-<script>
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-         document.getElementById('footer').innerHTML = data;
-        })
 
-        .catch(error => {
-    console.error('Fehler beim Laden des footers:', error);
-  });
-
-  
-</script>
 <script src="lernkarten/daten.js"></script>
 <script src="lernkarten/index.js"></script>
 </body>
